@@ -1,0 +1,61 @@
+id = "subword-navigation"
+name = "Subword Navigation"
+description = "Navigate, select, and delete within camelCase, snake_case, and separated subwords."
+version = "0.1.0"
+schema_version = 1
+authors = ["Olle Westman", "David Spies"]
+repository = "https://github.com/davidspies/zed-subword-navigation"
+
+[editor_commands."subwordNavigation.cursorSubwordLeft"]
+description = "Move the cursor left by one subword."
+
+[editor_commands."subwordNavigation.cursorSubwordRight"]
+description = "Move the cursor right by one subword."
+
+[editor_commands."subwordNavigation.cursorSubwordLeftSelect"]
+description = "Extend the selection left by one subword."
+
+[editor_commands."subwordNavigation.cursorSubwordRightSelect"]
+description = "Extend the selection right by one subword."
+
+[editor_commands."subwordNavigation.deleteSubwordLeft"]
+description = "Delete left by one subword."
+
+[editor_commands."subwordNavigation.deleteSubwordRight"]
+description = "Delete right by one subword."
+
+[[keybindings]]
+command = "subwordNavigation.cursorSubwordRight"
+context = "Editor || GitDiff"
+key = "alt-right"
+macos = "ctrl-right"
+
+[[keybindings]]
+command = "subwordNavigation.cursorSubwordRightSelect"
+context = "Editor || GitDiff"
+key = "alt-shift-right"
+macos = "ctrl-shift-right"
+
+[[keybindings]]
+command = "subwordNavigation.cursorSubwordLeft"
+context = "Editor || GitDiff"
+key = "alt-left"
+macos = "ctrl-left"
+
+[[keybindings]]
+command = "subwordNavigation.cursorSubwordLeftSelect"
+context = "Editor || GitDiff"
+key = "alt-shift-left"
+macos = "ctrl-shift-left"
+
+[[keybindings]]
+command = "subwordNavigation.deleteSubwordLeft"
+context = "Editor || GitDiff"
+key = "alt-backspace"
+macos = "ctrl-backspace"
+
+[[keybindings]]
+command = "subwordNavigation.deleteSubwordRight"
+context = "Editor || GitDiff"
+key = "alt-delete"
+macos = "ctrl-delete"
